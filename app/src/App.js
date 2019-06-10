@@ -16,10 +16,6 @@ class App extends Component {
     clickedItems: []
   };
 
-  // handleClick() {
-  //   console.log('Click happened');
-  // }
-
   handleClick = (event) => {
     // if (event) {
     //   console.log("clicked");
@@ -30,14 +26,15 @@ class App extends Component {
       });
     this.setState({ shapes });
     console.log({ shapes });
-    // this.setState({clickedItems: event.target.id});
+    const clickedItems = event.target.value;
+    this.setState({ clickedItems });
     // console.log({ clickedItems });
   }
 
   render() {
     return (
       <div className="App">
-        <Example>HI</Example>
+        <Example>Clicky Game</Example>
         <Wrapper>
         {this.state.shapes.map(shape => (
           <ImageCard
@@ -46,6 +43,7 @@ class App extends Component {
             id={shape.id}
             name={shape.name}
             image={shape.image}
+            value={shape.id}
           />
         ))}
         </Wrapper>

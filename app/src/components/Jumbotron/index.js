@@ -1,5 +1,6 @@
 import React from 'react';
 import { Jumbotron, Container } from 'reactstrap';
+import Counter from "../Counter";
 
 const Example = (props) => {
   return (
@@ -7,7 +8,8 @@ const Example = (props) => {
       <Jumbotron fluid>
         <Container fluid>
           <h1 className="display-3">{props.children}</h1>
-          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+          <p className="lead">Try not to click the same shape twice.</p>
+          <Counter />
         </Container>
       </Jumbotron>
     </div>

@@ -5,8 +5,8 @@ const ImageCard = (props) => {
     return (
         <div>
             <div className="card">
-                <div onClick={() => props.handleClick()} className="img-container">
-                    <img src={props.image} alt={props.name}/>
+                <div className="img-container">
+                    <img onClick={() => props.handleClick(props.id)} src={props.image} alt={props.name} value={props.id} {...props}/>
                 </div>
             </div>
         </div>
