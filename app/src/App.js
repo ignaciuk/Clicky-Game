@@ -26,8 +26,8 @@ class App extends Component {
       });
     this.setState({ shapes });
     console.log({ shapes });
-    const clickedItems = event.target.value;
-    this.setState({ clickedItems });
+    // const clickedItems = event.target.value;
+    // this.setState({ clickedItems });
     // console.log({ clickedItems });
   }
 
