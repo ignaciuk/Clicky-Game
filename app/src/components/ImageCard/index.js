@@ -4,9 +4,9 @@ import "./style.css";
 const ImageCard = (props) => {
     return (
         <div>
-            <div className="card">
+            <div onClick={() => props.clickCount(props.id)} className="card">
                 <div className="img-container">
-                    <img onClick={() => props.handleClick(props.id)} src={props.image} alt={props.name} value={props.id} {...props}/>
+                    <img  src={props.image} alt={props.name} value={props.id} {...props}/>
                 </div>
             </div>
         </div>
